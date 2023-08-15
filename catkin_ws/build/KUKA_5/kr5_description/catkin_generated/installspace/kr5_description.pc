@@ -1,0 +1,8 @@
+prefix=/home/parallels/Desktop/ESPOL/MR/Project/catkin_ws/install
+
+Name: kr5_description
+Description: Description of kr5_description
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

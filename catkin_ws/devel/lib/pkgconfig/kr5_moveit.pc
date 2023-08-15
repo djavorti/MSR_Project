@@ -1,0 +1,8 @@
+prefix=/home/parallels/Desktop/ESPOL/MR/Project/catkin_ws/devel
+
+Name: kr5_moveit
+Description: Description of kr5_moveit
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
