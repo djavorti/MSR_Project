@@ -3,6 +3,8 @@
   <arg name="paused" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="remap" default="false"/>
+  <arg name="gripper_2f" default="false" />
+  <arg name="camera_arm" default="false" />
   
   <group if="$(arg remap)">
     <!-- remap topics to conform to ROS-I specifications -->
@@ -29,6 +31,9 @@
   
   <!-- send robot URDF to ROS param server,
        and spawn robot in Gazebo, along with necessary ROS nodes -->
-  <include file="$(find kr5_gazebo)/launch/spawn_kr5.launch"/>
+  <include file="$(find kr5_gazebo)/launch/spawn_kr5.launch">
+    <arg name="camera_arm" value="$(arg camera_arm)"/>
+    <arg name="gripper_2f" value="$(arg gripper_2f)"/>
+  </include>
   
 </launch>

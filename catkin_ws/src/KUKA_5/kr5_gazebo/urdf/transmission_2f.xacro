@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="gripper" xmlns:xacro="http://wiki.ros.org/xacro">
-  <!-- KR10 -->
+  <!--KR5 -->
   
   <transmission name="trans_left_inner_knuckle_joint">
         <type>transmission_interface/SimpleTransmission</type>
