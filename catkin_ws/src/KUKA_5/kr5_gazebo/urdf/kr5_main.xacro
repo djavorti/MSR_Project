@@ -1,10 +1,16 @@
 <?xml version="1.0" ?>
 <robot name="kr5_main" xmlns:xacro="http://ros.org/wiki/xacro">
   
+  <xacro:arg name="camera" default="false"/>
   <xacro:arg name="camera_arm" default="false"/>
   <xacro:arg name="gripper_2f" default="false"/>
 
   <xacro:include filename="$(find kr5_gazebo)/urdf/gazebo.xacro"/>
+
+  <!-- camera -->
+  <xacro:if value="$(arg camera)">
+    <xacro:include filename="$(find kr5_gazebo)/urdf/camera.xacro"/>
+  </xacro:if>
 
   <!-- camera arm-->
   <xacro:if value="$(arg camera_arm)">
